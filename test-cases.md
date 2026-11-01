@@ -1,5 +1,5 @@
 ### TC-001 - Get all products
-##### Endpoint: GET /products
+**Endpoint:** GET /products
 ##### Objectives: Verify the products endpoint response structure and data types.
 ##### Preconditions:  
 - The API is reachable
