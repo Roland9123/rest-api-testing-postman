@@ -1,38 +1,37 @@
 ### TC-001 - Get all products
 
-##### Endpoint: GET /products
-##### Objectives: Verify the products endpoint response structure and data types.
-##### Preconditions:  
-- The API is reachable
+**Endpoint:** GET /products
+**Objectives:** Verify that the products endpoint returns a valid response containing a correctly structured list of products and pagination information.
+**Preconditions:**  
+- The DummyJSON API is reachable.
 - Postman is configured to send requests to the DummyJSON API.
 
-##### Test Steps:
-1. Send GET request to /products
-2. Verify the HTTP response status
+**Test Steps:**
+1. Send GET request to /products.
+2. Verify the HTTP response status code.
 3. Verify that the response Content-Type is JSON.
-4. Verify that pagination fields have the expected data types and validate values
-5. Verify that "products" is a non-empty array.
-6. Verify that the returned product count does not exceed "limit" and does not exceed "total"
-7. Verify that the first product contains valid "id", "title" and "price" fields.
+4. Verify that the response contains the expected pagination fields.
+5. Validate the data types and values of the pagination fields.
+6. Verify that the products field is a non-empty array.
+7. Validate the structure and data types of the first product.
 
-##### Expected Results:
-- TC-001A - The response status is 200 OK.
+**Expected Results:**
+- TC-001A - The response status code is `200 OK`.
 - TC-001B - The response content-type is JSON.
-- TC-001C - The response contains "products", "total", "skip" and "limit" fields. 
-- TC-001D - The pagination fields are numeric and have valid values. 
-- TC-001E - The "products" array is not empty. 
-- TC-001F - The returned product count does not exceed the values of "limit" and "total". 
-- TC-001G - Verify that the first object of the "products" array has valid "id", "title" and "price" fields.
-##### Execution Result: PASS
-##### Checks passed: 7/7
-##### Checks failed: 0
-##### Notes: Results are base on the recorded execution against the DummyJSON API.
+- TC-001C - The response contains `products`, `total`, `skip` and `limit` fields. 
+- TC-001D - The pagination fields contain valid numeric values. 
+- TC-001E - The `products` array is not empty. 
+- TC-001F - The returned product count does not exceed the values of `limit` and `total`. 
+- TC-001G - The first product contains a numeric `id`, a non-empty `title`, and a numeric `price`.
+**Execution Result:** PASS
+**Checks passed:** 7/7
+**Checks failed:** 0
 
 ### TC-002 - Limit Pagination
 
-##### Endpoint: GET /products?limit=5
-##### Objective: Verify that the API respects the requested pagination limit.
-##### Preconditions:
+**Endpoint:** GET /products?limit=5
+**Objectives:** Verify that the API respects the requested pagination limit.
+**Preconditions:** 
 - The API is reachable
 - Postman is configured to send requests to the DummyJSON API.
 
@@ -194,11 +193,12 @@
 ### TC-008 - Product Sorting
 
 **Endpoint:** GET /products?sortBy=title&order=asc
+GET /products?sortBy=title&order=desc
 
-**Objective:** Verify that products are correctly sorted alphabetically by title in ascending order.
+**Objective:** Verify that products are correctly sorted alphabetically by title in ascending/descending order.
 
 **Test steps:**
-1. Send a GET request with `sortBy=title` and `order=asc`.
+1. Send a GET request with `sortBy=title` and `order=asc` or `order=desc`
 2. Verify the HTTP status code.
 3. Verify pagination parameters.
 4. Verify that the response contains products.
@@ -210,9 +210,114 @@
 - Products are returned in an array.
 - `limit` equals 30 and `skip` equals 0.
 - All products have non-empty titles.
-- Product titles are sorted alphabetically in ascending order.
+- Product titles are sorted alphabetically in ascending/descending order.
 
 **Execution Result:** PASS
 **Checks Passed:** 5/5
 **Checks Failed:** 0
 **Notes:** 
+
+### TC-009 - Get All Product Categories
+
+**Endpoint:** GET /products/categories
+
+**Objective:** Verify the products categories and the fields validity.
+
+**Test Steps:** 
+1. Send a GET request to /products/categories.
+2. Verify the HTTP status code.
+3. Verify that the response is a non-empty array.
+4. Verify that the number of categories is valid and every category has a valid slug, name and URL.
+5. Verify that there are no duplicate categories.
+
+**Expected Results:** 
+- TC-010A: Status code is 200
+- TC-010B: Response is a non-empty array
+- TC-010C: API returns 24 categories
+- TC-010D: All categories have a valid slug
+- TC-010E: All categories have a valid name
+- TC-010F: All categories have a valid URL
+- TC-010G: Category slugs are unique
+
+**Execution Result:** PASS
+**Checks Passed:** 7/7
+**Checks Failed:** 0
+**Notes:** 
+
+### TC-010 - Get Products by Category
+
+**Endpoint:** `GET /products/category/smartphones`
+
+**Objective:** Verify that the API returns the products belonging to the requested category and that the returned product data is valid.
+
+**Test steps:**
+1. Send a GET request for the `smartphones` category.
+2. Verify the HTTP status code.
+3. Validate the response structure.
+4. Verify pagination values.
+5. Verify that the number of returned products matches the total.
+6. Verify that all products belong to the `smartphones` category.
+7. Validate product IDs, titles, and descriptions.
+8. Verify that all product descriptions contain the word `smartphone`, regardless of letter case.
+
+**Expected results:**
+- TC-010A - HTTP status code is `200 OK`.
+- TC-010B - Response contains a non-empty products array.
+- TC-010C - Pagination fields are valid.
+- TC-010D - All products are returned.
+- TC-010E - Every product belongs to the `smartphones` category.
+- TC-010F - Every product has a valid ID, non-empty title, and description.
+- TC-010G - Every description contains the word `smartphone`.
+
+**Execution Result:** PASS
+**Checks Passed:** 7/7
+**Checks Failed:** 0
+**Notes:** 
+
+### TC-011 - Product Creation
+
+**Endpoint:** POST /products/add
+**Objective:** 
+
+**Test Steps:**
+1. Send a POST request to `/products/add`.
+2. Add the products fields.
+3. Verify the status code.
+4. Verify the response is valid JSON.
+5. Verify that the response contains the valid input data.
+
+**Expected Results:**
+- TC-011A: Status code is 201 Created
+- TC-011B: Response is valid JSON
+- TC-011C: Response contains a numeric product ID
+- TC-011D: Product title matches the request
+- TC-011E: Product description matches the request
+- TC-011F: Product category matches the request
+- TC-011G: Product price matches the request
+- TC-011H: Product stock matches the request
+- TC-011I: Product brand matches the request
+
+**Execution Result:** PASS
+**Checks Passed:** 9/9
+**Checks Failed:** 0
+**Notes:**
+
+### TC-012 – Response Time Validation
+
+**Endpoint:** GET /products
+
+**Objective:** Verify the response time of the API.
+
+**Test Steps:**
+1. Send a GET request to `/products'
+2. Verify the status code of the request.
+3. Verify that the response time is less than 500 ms
+4. Verify that the response is JSON and contains products array that are not empty.
+
+**Expected Results:**
+
+- TC012A: Status code is 200
+
+- TC-012B: Response time is less than 500ms
+- TC-012C: Response body is valid JSON and contains products array
+- TC-012D: Products array is not empty
