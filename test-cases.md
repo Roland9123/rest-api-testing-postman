@@ -27,13 +27,17 @@
 - TC-001G - The first product contains a numeric `id`, a non-empty `title`, and a numeric `price`.
 
 **Execution Result:** PASS
+
 **Checks passed:** 7/7
+
 **Checks failed:** 0
 
 ### TC-002 - Limit Pagination
 
 **Endpoint:** GET /products?limit=5
+
 **Objectives:** Verify that the API respects the requested pagination limit.
+
 **Preconditions:** 
 - The API is reachable
 - Postman is configured to send requests to the DummyJSON API.
