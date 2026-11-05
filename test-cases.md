@@ -1,6 +1,7 @@
 ### TC-001 - Get all products
 
 **Endpoint:** GET /products
+
 **Objectives:** Verify that the products endpoint returns a valid response containing a correctly structured list of products and pagination information.
 **Preconditions:**  
 - The DummyJSON API is reachable.
