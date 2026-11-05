@@ -3,6 +3,7 @@
 **Endpoint:** GET /products
 
 **Objectives:** Verify that the products endpoint returns a valid response containing a correctly structured list of products and pagination information.
+
 **Preconditions:**  
 - The DummyJSON API is reachable.
 - Postman is configured to send requests to the DummyJSON API.
@@ -24,6 +25,7 @@
 - TC-001E - The `products` array is not empty. 
 - TC-001F - The returned product count does not exceed the values of `limit` and `total`. 
 - TC-001G - The first product contains a numeric `id`, a non-empty `title`, and a numeric `price`.
+
 **Execution Result:** PASS
 **Checks passed:** 7/7
 **Checks failed:** 0
