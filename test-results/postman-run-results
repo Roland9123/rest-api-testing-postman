@@ -1,0 +1,778 @@
+{
+	"id": "2a98295a-d9b3-4c27-9f18-af0358e61d15",
+	"name": "DummyJSON-Products-API",
+	"timestamp": "2026-11-09T14:16:37.870Z",
+	"collection_id": "58877897-358a4cfe-45fd-4655-8b60-05d6612aaab6",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 76,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-11-09T14:16:34.936Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "e068320f-2f32-4ec9-be04-96899352658c",
+			"name": "TC-001",
+			"url": "https://dummyjson.com/products",
+			"time": 268,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC-001: Status code is 200": true,
+				"TC-001: Response is JSON": true,
+				"TC-001: Response contains required top-level fields": true,
+				"TC-001: Pagination fields are valid numbers": true,
+				"TC-001: Products is a non-empty array": true,
+				"TC-001: Product count is consistent with pagination": true,
+				"TC-001: First product has valid basic fields": true
+			},
+			"testPassFailCounts": {
+				"TC-001: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-001: Response is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-001: Response contains required top-level fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-001: Pagination fields are valid numbers": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-001: Products is a non-empty array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-001: Product count is consistent with pagination": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-001: First product has valid basic fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				268
+			],
+			"allTests": [
+				{
+					"TC-001: Status code is 200": true,
+					"TC-001: Response is JSON": true,
+					"TC-001: Response contains required top-level fields": true,
+					"TC-001: Pagination fields are valid numbers": true,
+					"TC-001: Products is a non-empty array": true,
+					"TC-001: Product count is consistent with pagination": true,
+					"TC-001: First product has valid basic fields": true
+				}
+			]
+		},
+		{
+			"id": "7f9e838d-b555-4c86-9666-9efafbe6b231",
+			"name": "TC-002",
+			"url": "https://dummyjson.com/products?limit=5",
+			"time": 168,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC-002: Status code is 200": true,
+				"TC-002: Limit is set to 5": true,
+				"TC-002: Exactly 5 products are returned": true,
+				"TC-002: Skip defaults to 0": true,
+				"TC-002: Total is a valid number": true,
+				"TC-002: Product entries contain required fields": true
+			},
+			"testPassFailCounts": {
+				"TC-002: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-002: Limit is set to 5": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-002: Exactly 5 products are returned": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-002: Skip defaults to 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-002: Total is a valid number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-002: Product entries contain required fields": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				168
+			],
+			"allTests": [
+				{
+					"TC-002: Status code is 200": true,
+					"TC-002: Limit is set to 5": true,
+					"TC-002: Exactly 5 products are returned": true,
+					"TC-002: Skip defaults to 0": true,
+					"TC-002: Total is a valid number": true,
+					"TC-002: Product entries contain required fields": true
+				}
+			]
+		},
+		{
+			"id": "36730ef6-266e-445c-81fd-8e017c83e6c1",
+			"name": "TC-003",
+			"url": "https://dummyjson.com/products/1",
+			"time": 37,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC-003A: Status code is 200": true,
+				"TC-003B: Response is JSON": true,
+				"TC-003C: Returned product ID is 1": true,
+				"TC-003D: Product title is a non-empty string": true,
+				"TC-003E: Product price is a number": true,
+				"TC-003F: Product description is a non-empty string": true,
+				"TC-003G: Product category is a non-empty string": true
+			},
+			"testPassFailCounts": {
+				"TC-003A: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-003B: Response is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-003C: Returned product ID is 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-003D: Product title is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-003E: Product price is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-003F: Product description is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-003G: Product category is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				37
+			],
+			"allTests": [
+				{
+					"TC-003A: Status code is 200": true,
+					"TC-003B: Response is JSON": true,
+					"TC-003C: Returned product ID is 1": true,
+					"TC-003D: Product title is a non-empty string": true,
+					"TC-003E: Product price is a number": true,
+					"TC-003F: Product description is a non-empty string": true,
+					"TC-003G: Product category is a non-empty string": true
+				}
+			]
+		},
+		{
+			"id": "f3766643-e109-4afc-91c2-0225c565729b",
+			"name": "TC-004",
+			"url": "https://dummyjson.com/products/999999",
+			"time": 127,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"TC-004A: Status code is 404": true,
+				"TC-004B: Response is JSON": true,
+				"TC-004C: Error message is present": true,
+				"TC-004D: Error message identifies the requested product ID": true,
+				"TC-004E: Error message matches the expected result": true
+			},
+			"testPassFailCounts": {
+				"TC-004A: Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-004B: Response is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-004C: Error message is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-004D: Error message identifies the requested product ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-004E: Error message matches the expected result": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				127
+			],
+			"allTests": [
+				{
+					"TC-004A: Status code is 404": true,
+					"TC-004B: Response is JSON": true,
+					"TC-004C: Error message is present": true,
+					"TC-004D: Error message identifies the requested product ID": true,
+					"TC-004E: Error message matches the expected result": true
+				}
+			]
+		},
+		{
+			"id": "4e04ed55-3117-4542-a26d-0e700f68a0f6",
+			"name": "TC-005",
+			"url": "https://dummyjson.com/products/search?q=phone",
+			"time": 166,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC-005A: Status code is 200": true,
+				"TC-005B: Response is JSON": true,
+				"TC-005C: Products is an array": true,
+				"TC-005D: Total is a valid non-negative number": true,
+				"TC-005E: Total matches returned product count": true,
+				"TC-005F: Search returns matching products": true
+			},
+			"testPassFailCounts": {
+				"TC-005A: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-005B: Response is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-005C: Products is an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-005D: Total is a valid non-negative number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-005E: Total matches returned product count": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-005F: Search returns matching products": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				166
+			],
+			"allTests": [
+				{
+					"TC-005A: Status code is 200": true,
+					"TC-005B: Response is JSON": true,
+					"TC-005C: Products is an array": true,
+					"TC-005D: Total is a valid non-negative number": true,
+					"TC-005E: Total matches returned product count": true,
+					"TC-005F: Search returns matching products": true
+				}
+			]
+		},
+		{
+			"id": "5d28958c-bab6-4996-adc4-fa240b87421a",
+			"name": "TC-006",
+			"url": "https://dummyjson.com/products/search?q=qa-no-mqtch-987654321",
+			"time": 162,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC-006A: Status code is 200": true,
+				"TC-006B: Response is JSON": true,
+				"TC-006C: Products is an empty array": true,
+				"TC-006D: Total equals 0": true,
+				"TC-006E: Skip equals 0": true,
+				"TC-006F: Limit equals 0": true
+			},
+			"testPassFailCounts": {
+				"TC-006A: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-006B: Response is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-006C: Products is an empty array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-006D: Total equals 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-006E: Skip equals 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-006F: Limit equals 0": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				162
+			],
+			"allTests": [
+				{
+					"TC-006A: Status code is 200": true,
+					"TC-006B: Response is JSON": true,
+					"TC-006C: Products is an empty array": true,
+					"TC-006D: Total equals 0": true,
+					"TC-006E: Skip equals 0": true,
+					"TC-006F: Limit equals 0": true
+				}
+			]
+		},
+		{
+			"id": "8d8e4622-9cbb-4971-bc33-6410a4ca1e90",
+			"name": "TC-007",
+			"url": "https://dummyjson.com/products?limit=5&skip=5",
+			"time": 128,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC-007A: Status code is 200": true,
+				"TC-007B: Response is JSON": true,
+				"TC-007C: Limit equals 5": true,
+				"TC-007D: Skip equals 5": true,
+				"TC-007E: Exactly 5 products are returned": true,
+				"TC-007F: First page data is available": true,
+				"TC-007G: No products are repeated between pages": true
+			},
+			"testPassFailCounts": {
+				"TC-007A: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-007B: Response is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-007C: Limit equals 5": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-007D: Skip equals 5": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-007E: Exactly 5 products are returned": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-007F: First page data is available": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-007G: No products are repeated between pages": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				128
+			],
+			"allTests": [
+				{
+					"TC-007A: Status code is 200": true,
+					"TC-007B: Response is JSON": true,
+					"TC-007C: Limit equals 5": true,
+					"TC-007D: Skip equals 5": true,
+					"TC-007E: Exactly 5 products are returned": true,
+					"TC-007F: First page data is available": true,
+					"TC-007G: No products are repeated between pages": true
+				}
+			]
+		},
+		{
+			"id": "42f6dbc7-6a57-40fb-b833-b1df3caea85c",
+			"name": "TC-008",
+			"url": "https://dummyjson.com/products?sortBy=title&order=asc",
+			"time": 158,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC-008A: Status code is 200": true,
+				"TC-008B: Response contains products": true,
+				"TC-008C: Sorting parameters are correct": true,
+				"TC-008D: Products are sorted by title in ascending order": true,
+				"TC-008E: All products have a title": true
+			},
+			"testPassFailCounts": {
+				"TC-008A: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-008B: Response contains products": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-008C: Sorting parameters are correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-008D: Products are sorted by title in ascending order": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-008E: All products have a title": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"TC-008A: Status code is 200": true,
+					"TC-008B: Response contains products": true,
+					"TC-008C: Sorting parameters are correct": true,
+					"TC-008D: Products are sorted by title in ascending order": true,
+					"TC-008E: All products have a title": true
+				}
+			]
+		},
+		{
+			"id": "377679aa-8f2f-470d-888a-a5885bb7a74c",
+			"name": "TC-009",
+			"url": "https://dummyjson.com/products/categories",
+			"time": 129,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC-010A: Status code is 200": true,
+				"TC-010B: Response is a non-empty array": true,
+				"TC-010C: API returns 24 categories": true,
+				"TC-010D: All categories have a valid slug": true,
+				"TC-010E: All categories have a valid name": true,
+				"TC-010F: All categories have a valid URL": true,
+				"TC-010G: Category slugs are unique": true
+			},
+			"testPassFailCounts": {
+				"TC-010A: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-010B: Response is a non-empty array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-010C: API returns 24 categories": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-010D: All categories have a valid slug": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-010E: All categories have a valid name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-010F: All categories have a valid URL": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-010G: Category slugs are unique": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				129
+			],
+			"allTests": [
+				{
+					"TC-010A: Status code is 200": true,
+					"TC-010B: Response is a non-empty array": true,
+					"TC-010C: API returns 24 categories": true,
+					"TC-010D: All categories have a valid slug": true,
+					"TC-010E: All categories have a valid name": true,
+					"TC-010F: All categories have a valid URL": true,
+					"TC-010G: Category slugs are unique": true
+				}
+			]
+		},
+		{
+			"id": "f9389568-e5c4-49bc-a444-15a5d419a4d7",
+			"name": "TC-010",
+			"url": "https://dummyjson.com/products/category/smartphones",
+			"time": 133,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"TC-010A: Status code is 200": true,
+				"TC-010B: Response contains a non-empty products array": true,
+				"TC-010C: Pagination values are correct": true,
+				"TC-010D: Number of products matches total": true,
+				"TC-010E: All products belong to smartphones category": true,
+				"TC-010F: All products have valid IDs and titles": true,
+				"TC-010G: All product descriptions contain the word smartphone": true
+			},
+			"testPassFailCounts": {
+				"TC-010A: Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-010B: Response contains a non-empty products array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-010C: Pagination values are correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-010D: Number of products matches total": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-010E: All products belong to smartphones category": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-010F: All products have valid IDs and titles": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-010G: All product descriptions contain the word smartphone": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				133
+			],
+			"allTests": [
+				{
+					"TC-010A: Status code is 200": true,
+					"TC-010B: Response contains a non-empty products array": true,
+					"TC-010C: Pagination values are correct": true,
+					"TC-010D: Number of products matches total": true,
+					"TC-010E: All products belong to smartphones category": true,
+					"TC-010F: All products have valid IDs and titles": true,
+					"TC-010G: All product descriptions contain the word smartphone": true
+				}
+			]
+		},
+		{
+			"id": "c8a28030-253b-45b2-b3b3-1ffc19404388",
+			"name": "TC-011",
+			"url": "https://dummyjson.com/products/add",
+			"time": 163,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"TC-011A: Status code is 201 Created": true,
+				"TC-011B: Response is valid JSON": true,
+				"TC-011C: Response contains a numeric product ID": true,
+				"TC-011D: Product title matches the request": true,
+				"TC-011E: Product description matches the request": true,
+				"TC-011F: Product category matches the request": true,
+				"TC-011G: Product price matches the request": true,
+				"TC-011H: Product stock matches the request": true,
+				"TC-011I: Product brand matches the request": true
+			},
+			"testPassFailCounts": {
+				"TC-011A: Status code is 201 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-011B: Response is valid JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-011C: Response contains a numeric product ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-011D: Product title matches the request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-011E: Product description matches the request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-011F: Product category matches the request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-011G: Product price matches the request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-011H: Product stock matches the request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"TC-011I: Product brand matches the request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				163
+			],
+			"allTests": [
+				{
+					"TC-011A: Status code is 201 Created": true,
+					"TC-011B: Response is valid JSON": true,
+					"TC-011C: Response contains a numeric product ID": true,
+					"TC-011D: Product title matches the request": true,
+					"TC-011E: Product description matches the request": true,
+					"TC-011F: Product category matches the request": true,
+					"TC-011G: Product price matches the request": true,
+					"TC-011H: Product stock matches the request": true,
+					"TC-011I: Product brand matches the request": true
+				}
+			]
+		},
+		{
+			"id": "291308fa-ae0c-4369-a90f-efb546c74776",
+			"name": "TC-012",
+			"url": "https://dummyjson.com/products",
+			"time": 46,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Response body is valid JSON and contains products array": true,
+				"Products array is not empty": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is valid JSON and contains products array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Products array is not empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Response body is valid JSON and contains products array": true,
+					"Products array is not empty": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1685,
+	"collection": {
+		"requests": [
+			{
+				"id": "e068320f-2f32-4ec9-be04-96899352658c",
+				"method": "GET"
+			},
+			{
+				"id": "7f9e838d-b555-4c86-9666-9efafbe6b231",
+				"method": "GET"
+			},
+			{
+				"id": "36730ef6-266e-445c-81fd-8e017c83e6c1",
+				"method": "GET"
+			},
+			{
+				"id": "f3766643-e109-4afc-91c2-0225c565729b",
+				"method": "GET"
+			},
+			{
+				"id": "4e04ed55-3117-4542-a26d-0e700f68a0f6",
+				"method": "GET"
+			},
+			{
+				"id": "5d28958c-bab6-4996-adc4-fa240b87421a",
+				"method": "GET"
+			},
+			{
+				"id": "8d8e4622-9cbb-4971-bc33-6410a4ca1e90",
+				"method": "GET"
+			},
+			{
+				"id": "42f6dbc7-6a57-40fb-b833-b1df3caea85c",
+				"method": "GET"
+			},
+			{
+				"id": "377679aa-8f2f-470d-888a-a5885bb7a74c",
+				"method": "GET"
+			},
+			{
+				"id": "f9389568-e5c4-49bc-a444-15a5d419a4d7",
+				"method": "GET"
+			},
+			{
+				"id": "c8a28030-253b-45b2-b3b3-1ffc19404388",
+				"method": "POST"
+			},
+			{
+				"id": "291308fa-ae0c-4369-a90f-efb546c74776",
+				"method": "GET"
+			}
+		]
+	}
+}
