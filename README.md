@@ -69,10 +69,9 @@ For Detailed test steps, expected results, and execution results, see `test-case
 ```
 rest-api-testing-postman/
 ├── README.md
-├── postman/
-├── test-cases/
-├── bug-reports/
-└── test-results/
+├── postman/DummyJSON-Products-API.postman_collection.json
+├── test-cases/test-cases.md
+└── test-results/postman-run-results.json
 ```
 ## Limitations
 
