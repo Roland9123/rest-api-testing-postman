@@ -2,22 +2,19 @@
 
 ## Project Overview
 
-This personal QA portfolio project focuses on testing the DummyJSON REST API using Postman. It demonstrates practical skills in API test design, HTTP response validation, JSON structure verification, negative testing, and test documentation.
+This is a personal API testing project focused on testing the DummyJSON Products API using Postman.
 
-## Objectives
+The purpose of this project is to practice REST API testing, validate API responses, write automated assertions using JavaScript, and document test execution results.
 
-* Validate REST API endpoints using positive and negative test scenarios.
-* Verify HTTP status codes, response bodies, data types, and required fields.
-* Test product retrieval, search, pagination, sorting, and category filtering.
-* Document expected and actual results.
-* Create reusable Postman requests and automated assertions.
+The project covers positive and negative scenarios, data validation, pagination, sorting, product search, category filtering, product creation simulation, and basic response-time validation.
 
 ## Tools and Technologies
 
-* Postman
-* REST API and HTTP
-* JSON
-* Git and GitHub
+* Postman - API request execution and automated testing
+* JavaScript - Writing test scripts and resonse assertions
+* REST API - HTTP methods and endpoint testing
+* JSON - Request payloads and response validation
+* Git and GitHub - Version control and project documentation
 
 ## API Under Test
 
@@ -26,16 +23,21 @@ DummyJSON provides sample REST API endpoints for development and testing.
 * API base URL: `https://dummyjson.com`
 * Documentation: https://dummyjson.com/docs/products
 
-## Project Structure
+## Test Scope
+The project contains 12 test cases covering the following scenarios:
+| Test Case | Description | Method | 
+| --- | --- | ---|
+| TC-001 | Get All Products | GET |
 
-```text
+## Project Structure
+`
 rest-api-testing-postman/
 ├── README.md
 ├── postman/
 ├── test-cases/
 ├── bug-reports/
 └── test-results/
-```
+`
 
 ## Test Scope
 
@@ -49,6 +51,8 @@ The planned test coverage includes:
 * Field selection
 * Product category filtering
 * Negative scenarios involving invalid resource identifiers
+* Product creation
+* Response time validation
 
 ## Test Execution
 
@@ -58,11 +62,11 @@ No test execution results are reported until the corresponding tests have been r
 
 ## Results Summary
 
-* Planned test cases: 10
-* Executed test cases: Pending
-* Passed: Pending
-* Failed: Pending
-* Blocked: Pending
+* Planned test cases: 12
+* Executed test cases: 12
+* Passed: 12
+* Failed: 0
+* Blocked: 0
 
 ## Limitations
 
