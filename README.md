@@ -28,6 +28,42 @@ The project contains 12 test cases covering the following scenarios:
 | Test Case | Description | Method | 
 | --- | --- | ---|
 | TC-001 | Get All Products | GET |
+| TC-002 | Limit Products | GET |
+| TC-003 | Get Ptoduct by ID | GET |
+| TC-004 | Get Non-existing Product | GET |
+| TC-005 | Search Products | GET |
+| TC-006 | Search Without Results | GET |
+| TC-007 | Pagination with Skip | GET |
+| TC-008 | Product Sorting | GET |
+| TC-009 | Get All Product Categories | GET |
+| TC-010 | Get Products by Category | GET | 
+| TC-011 | Product Creation | POST |
+| TC-012 | Response Time Validation | GET |
+
+## Testing Areas
+
+- HTTP status code validation
+- JSON response structure and data type validation
+- Positive and negative testing
+- Product data validation
+- Search functionality
+- Pagination and duplicate detection
+- Ascending and descending sorting
+- Product category validation
+- POST request and response validation
+- Basic response-time validation
+
+## Test Execution Results
+
+| Metric | Results |
+| --- | --- |
+| Total Test Cases | 12 |
+| Total Assertions | 76 | 
+| Passed Assertions | 76 | 
+| Failed Assertions | 0 |
+| Pass Rate | 100% |
+
+For Detailed test steps, expected results, and execution results, see `test-cases.md`.
 
 ## Project Structure
 `
@@ -38,35 +74,6 @@ rest-api-testing-postman/
 ├── bug-reports/
 └── test-results/
 `
-
-## Test Scope
-
-The planned test coverage includes:
-
-* Product list and individual product retrieval
-* Response structure and data type validation
-* Search and empty search results
-* Pagination
-* Sorting
-* Field selection
-* Product category filtering
-* Negative scenarios involving invalid resource identifiers
-* Product creation
-* Response time validation
-
-## Test Execution
-
-Test cases will be executed using Postman. Actual results, execution status, and supporting evidence will be documented after execution.
-
-No test execution results are reported until the corresponding tests have been run.
-
-## Results Summary
-
-* Planned test cases: 12
-* Executed test cases: 12
-* Passed: 12
-* Failed: 0
-* Blocked: 0
 
 ## Limitations
 
