@@ -312,9 +312,10 @@
 - TC-010G - Every description contains the word `smartphone`.
 
 **Execution Result:** PASS
+
 **Checks Passed:** 7/7
+
 **Checks Failed:** 0
-**Notes:** 
 
 ### TC-011 - Product Creation
 
