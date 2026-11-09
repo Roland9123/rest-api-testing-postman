@@ -66,14 +66,13 @@ The project contains 12 test cases covering the following scenarios:
 For Detailed test steps, expected results, and execution results, see `test-cases.md`.
 
 ## Project Structure
-`
+
 rest-api-testing-postman/
 ├── README.md
 ├── postman/
 ├── test-cases/
 ├── bug-reports/
 └── test-results/
-`
 
 ## Limitations
 
